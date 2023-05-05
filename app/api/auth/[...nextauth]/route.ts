@@ -1,8 +1,8 @@
-import NextAuth from "next-auth"
+import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import { addUser } from "@/service/user"
 
-const handler = NextAuth({
+const handler: NextAuthOptions = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_OAUTH_ID || "",
@@ -22,7 +22,6 @@ const handler = NextAuth({
       return true
     },
     async session({ session }) {
-      console.log("session", session)
       const user = session.user
       if (user) {
         session.user = {
