@@ -1,12 +1,12 @@
 import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation"
-import { GET } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import FollowingBar from "@/components/FollowingBar"
 import PostList from "@/components/PostList"
 import SideBar from "@/components/SideBar"
 
 export default async function HomePage() {
-  const session = await getServerSession(GET)
+  const session = await getServerSession(authOptions)
   const user = session?.user
 
   if (!user) {
