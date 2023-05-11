@@ -1,8 +1,8 @@
-import { User } from "@/model/user"
+import { AuthUser } from "@/model/user"
 import Avatar from "./Avatar"
 
 interface Props {
-  user: User
+  user: AuthUser
 }
 
 export default function SideBar({ user: { name, username, image } }: Props) {
