@@ -1,5 +1,9 @@
 import { BsBookmarkStar } from "react-icons/bs"
 
-export default function BookmarkIcon() {
-  return <BsBookmarkStar className="w-6 h-6" />
+type Props = {
+  className?: string
+}
+
+export default function BookmarkIcon({ className }: Props) {
+  return <BsBookmarkStar className={className || "w-6 h-6"} />
 }
