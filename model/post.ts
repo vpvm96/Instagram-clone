@@ -1,7 +1,7 @@
 export interface Comment {
   comment: string
   username: string
-  image: string
+  image?: string | undefined
 }
 
 export interface SimplePost extends Omit<FullPost, "comments"> {
