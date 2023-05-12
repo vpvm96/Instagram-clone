@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Avatar from "./Avatar"
 
 interface Props {
@@ -8,7 +9,9 @@ interface Props {
 export default function PostUserAvatar({ image, username }: Props) {
   return (
     <div className="flex items-center p-2">
-      <Avatar image={image} size="medium" highlight />
+      <Link href={`/user/${username}`} aria-label={username}>
+        <Avatar image={image} size="medium" highlight />
+      </Link>
       <span className="text-gray-900 font-bold ml-2">{username}</span>
     </div>
   )
