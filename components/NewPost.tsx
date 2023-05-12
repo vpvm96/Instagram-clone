@@ -94,7 +94,7 @@ export default function NewPost({ user: { username, image } }: Props) {
           onChange={handleChange}
         />
         <label
-          className={`w-full h-60 flex flex-col items-center justify-center ${
+          className={`w-full h-60 flex flex-col items-center justify-center relative hover:cursor-pointer ${
             !file && "border-2 border-sky-500 border-dashed"
           }`}
           htmlFor="input-upload"

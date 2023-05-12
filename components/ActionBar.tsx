@@ -42,7 +42,7 @@ export default function ActionBar({ post, onComment, children }: Props) {
 
   return (
     <>
-      <div className="flex justify-between my-1 p-4">
+      <div className="flex justify-between my-1 p-4 border-t border-t-gray-200">
         <ToggleButton
           title={liked ? "unlike" : "like"}
           toggled={liked}
