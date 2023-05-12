@@ -35,6 +35,7 @@ export default function ActionBar({ post, onComment, children }: Props) {
     user && setBookmark(id, bookmark)
   }
 
+  // 댓글을 작성하면 댓글을 추가합니다.
   const handleComment = (comment: string) => {
     user && onComment({ comment, username: user.username, image: user.image })
   }
