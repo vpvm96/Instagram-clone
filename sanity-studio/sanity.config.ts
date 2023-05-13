@@ -9,7 +9,7 @@ const devOnlyPlugins = [getStartedPlugin()]
 export default defineConfig({
   name: 'default',
   title: 'coral-pigeon',
-  projectId: process.env.REACT_APP_SANITY_CONFIG_PROJECT_ID as string,
+  projectId: 'pdpgeseq',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool(), ...(isDev ? devOnlyPlugins : [])],
