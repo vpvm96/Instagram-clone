@@ -2,6 +2,7 @@ export interface Comment {
   comment: string
   username: string
   image?: string | undefined
+  isMine: boolean
 }
 
 export interface SimplePost extends Omit<FullPost, "comments"> {
@@ -10,6 +11,7 @@ export interface SimplePost extends Omit<FullPost, "comments"> {
 
 export interface FullPost {
   id: string
+  userId: string
   username: string
   userImage: string
   image: string

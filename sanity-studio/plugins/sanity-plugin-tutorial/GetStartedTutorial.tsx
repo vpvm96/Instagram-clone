@@ -54,7 +54,6 @@ export const GetStartedTutorial = () => {
           {isSmallScreen && (
             <LabelContainer forwardedAs="p">Your Sanity Studio is all set up!</LabelContainer>
           )}
-
           <Button
             aria-label="Close dialog"
             icon={CloseIcon}
@@ -75,7 +74,6 @@ export const GetStartedTutorial = () => {
               </Heading>
             </>
           )}
-
           <Container width={1}>
             <TextContainer
               forwardedAs="p"
@@ -86,7 +84,6 @@ export const GetStartedTutorial = () => {
               a frontend. You’ll see updates reflected in your Studio below.
             </TextContainer>
           </Container>
-
           <Flex justify={isSmallScreen ? 'flex-start' : 'center'}>
             <Button
               as="a"
