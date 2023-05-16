@@ -5,7 +5,11 @@ import { FullPost, Comment } from "@/model/post"
 async function addComment(id: string, comment: string) {
   return fetch("/api/comments", {
     method: "POST",
-    body: JSON.stringify({ id, comment }),
+    body: JSON.stringify({
+      id,
+      comment,
+      commentId: new Date().getTime().toString(),
+    }),
   }).then((res) => res.json())
 }
 

@@ -37,7 +37,7 @@ export async function getPost(id: string) {
       "userImage": author->image,
       "image": photo,
       "likes": likes[]->username,
-      comments[]{comment, "username": author->username, "image": author->image},
+      comments[]{comment, "username": author->username, "image": author->image, commentId},
       "id": _id,
       "createdAt": _createdAt,
     }`
@@ -109,13 +109,15 @@ export async function dislikePost(postId: string, userId: string) {
 export async function addComment(
   postId: string,
   userId: string,
-  comment: string
+  comment: string,
+  commentId: string
 ) {
   return client
     .patch(postId)
     .setIfMissing({ comments: [] })
     .append("comments", [
       {
+        commentId,
         comment,
         author: { _ref: userId, _type: "reference" },
       },

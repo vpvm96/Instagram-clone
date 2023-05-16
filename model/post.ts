@@ -1,4 +1,5 @@
 export interface Comment {
+  commentId: string
   comment: string
   username: string
   image?: string | undefined

@@ -42,6 +42,11 @@ export default {
               name: 'comment',
               type: 'string',
             },
+            {
+              title: 'CommentId',
+              name: 'commentId',
+              type: 'string',
+            },
           ],
         },
       ],
